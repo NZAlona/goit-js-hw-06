@@ -24,9 +24,10 @@ function onSubmitForm(event) {
   } = event.currentTarget;
 
   if (email.value === '' || password.value === '') {
-    alert('Please fill in all the fields!');
+    return alert('Please fill in all the fields!');
   }
 
-  console.log(email.value, password.value);
+  const userInfo = { Email: email.value.trim(), Password: password.value.trim() };
+  console.log(userInfo);
   event.currentTarget.reset();
 }

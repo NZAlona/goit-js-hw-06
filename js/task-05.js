@@ -7,5 +7,9 @@ console.log(textOutput);
 textInput.addEventListener('input', onInputText);
 
 function onInputText(event) {
-  textOutput.textContent = event.currentTarget.value;
+  if (textInput.value === '') {
+    textOutput.textContent = 'Anonymous';
+  } else {
+    textOutput.textContent = event.currentTarget.value.trim();
+  }
 }
