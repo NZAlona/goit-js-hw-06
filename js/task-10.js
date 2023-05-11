@@ -20,6 +20,7 @@ refs.btnDestroy.addEventListener('click', onBtnDestroyClick);
 
 function onBtnDestroyClick() {
   refs.divContainer.innerHTML = '';
+  refs.inputValue.value = '';
 }
 
 function createBoxes(amount) {
